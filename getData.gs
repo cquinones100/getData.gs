@@ -14,6 +14,11 @@ function getData(route) {
   return UrlFetchApp.fetch(url, options);
 }
 
+function inspectData(route) {
+  Logger.log(JSON.parse(response))
+}
+
+
 function getBatchData(route) {
   var response = getData(route)
   var batches = JSON.parse(response).batches;
