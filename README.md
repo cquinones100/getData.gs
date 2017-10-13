@@ -43,4 +43,10 @@ and the headers key from the `options` object
 }
 ```
 
-`getData(route)` - takes a route to be appending to your URL value and returns a response
+### Built in Functions
+
+`getData(route)` - takes a route and returns a response
+
+`inspectData(route)` - takes a route  and logs the parsed JSON data response
+
+`getDataByKey(key, route)` - take a string key and a route and returns the data value for the passed in key
