@@ -15,14 +15,14 @@ function getData(route) {
 }
 
 function inspectData(route) {
+  response = getData(route)
   Logger.log(JSON.parse(response))
 }
 
-
-function getBatchData(route) {
+function getDataByKey(key, route) {
   var response = getData(route)
-  var batches = JSON.parse(response).batches;
-  return batches
+  var data = JSON.parse(response)[key];
+  return data
 }
 
 function addDataToForm(data, query) {
