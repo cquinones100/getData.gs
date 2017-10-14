@@ -1,8 +1,12 @@
-function getData(route) {
+function getData(route, root) {
   //user name and password to be used for basic http authentication
   var userName = // your userName
   var password = // your password
-  var url = //your url + route
+  if (typeof root !== 'undefined') {
+    var url = root
+  } else {
+    var url = //your url + route
+  }
 
    var options = {
    'headers' : {
