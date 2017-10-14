@@ -24,23 +24,3 @@ function getDataByKey(key, route) {
   var data = JSON.parse(response)[key];
   return data
 }
-
-function addDataToForm(data, query) {
-  var dataTypes = {
-    "Batch Number": addOptionsToFormElement(data)
-  }
-
-  var form = FormApp.getActiveForm()
-  var formItems = form.getItems()
-  var formElements = formItems.filter(function(item){
-    return item.getTitle() == query;
-  })
-  var formElement = formElements[0].asListItem();
-}
-
-function addOptionsToFormElement(options) {
-  optionsArr = []
-  for (i in options) {
-   optionsArr.push(options[i])
-  }
-}
