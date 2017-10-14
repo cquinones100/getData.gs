@@ -55,3 +55,8 @@ function getDataByKey(key, route) {
   var data = JSON.parse(response)[key];
   return data
 }
+
+function inspectData(route) {
+  response = getData(route)
+  Logger.log(JSON.parse(response))
+}
